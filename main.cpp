@@ -201,7 +201,7 @@ int main()
     //10)
     auto lie =lieDetector( 2, 6);
     
-    ignoreUnused(carRented);
+    ignoreUnused(carRented,bike,phase,gain,adress,build,away,lie);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
