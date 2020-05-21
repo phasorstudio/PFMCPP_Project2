@@ -56,23 +56,23 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    int velocity =98;
-    int velocityMax=127;
-    int velocityMin=64;
+    int velocity = 98;
+    int velocityMax = 127;
+    int velocityMin = 64;
 
     double height = 1.83;
-    double width =2.50;
-    double length= 4.583;
+    double width = 2.50;
+    double length = 4.583;
 
-    float pi =3.1415926f;
+    float pi = 3.1415926f;
     float gravity = 6.67430f;
     float gain = 1.0f;
 
-    bool off =false;
-    bool startGame= true;
+    bool off = false;
+    bool startGame = true;
     bool gameOver = false;
     
-    ignoreUnused(number,velocity,velocityMax,velocityMin,height,width,length,pi,gravity,gain,off,startGame,gameOver); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, velocity, velocityMax, velocityMin, height, width, length, pi, gravity, gain, off, startGame, gameOver); //passing each variable declared to the ignoreUnused() function
 }
 /*
  10 functions
@@ -87,9 +87,10 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)Rent a bike
  */
-bool rentBike(double rentDate,int amountOfMoney= 10)
+bool rentBike(double rentDate, int amountOfMoney = 10)
 {
-  ignoreUnused(rentDate,amountOfMoney);
+  ignoreUnused(rentDate, amountOfMoney);
+
   return{};
 }
 /*
@@ -97,7 +98,7 @@ bool rentBike(double rentDate,int amountOfMoney= 10)
  */
 void playSound(float wavFile, float fs = 44100.0f)
 {
- ignoreUnused(wavFile,fs);
+ ignoreUnused(wavFile, fs);
 }
 /*
  3)Phaser
@@ -181,27 +182,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    auto bike = rentBike(4,10);
+    auto bike = rentBike(4, 10);
     //2)
     playSound(2.0f, 44100.0f);
     //3)
-    auto phase =phaser(0.4f, 0.2f, 0.1f);
+    auto phase = phaser(0.4f, 0.2f, 0.1f);
     //4)
-    auto gain =inputGain(1.0f,3);
+    auto gain = inputGain(1.0f, 3);
     //5)
-    grillMeat(3,true);
+    grillMeat(3, true);
     //6)
-    auto adress= getAdressNumber(46);
+    auto adress = getAdressNumber(46);
     //7)
     auto build = buildLevel(true, 100.000);
     //8)
-    abortMission(0.0,false);
+    abortMission(0.0, false);
     //9)
     auto away =takeAway(1 , 2 , 2.5);
     //10)
-    auto lie =lieDetector( 2, 6);
+    auto lie =lieDetector(2, 6);
     
-    ignoreUnused(carRented,bike,phase,gain,adress,build,away,lie);
+    ignoreUnused(carRented, bike, phase, gain, adress, build,away, lie);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
