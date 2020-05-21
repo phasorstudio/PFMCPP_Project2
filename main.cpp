@@ -198,9 +198,9 @@ int main()
     //8)
     abortMission(0.0, false);
     //9)
-    auto away =takeAway(1 , 2 , 2.5);
+    auto away = takeAway(1 , 2 , 2.5);
     //10)
-    auto lie =lieDetector(2, 6);
+    auto lie = lieDetector(2, 6);
     
     ignoreUnused(carRented, bike, phase, gain, adress, build,  away, lie);
     std::cout << "good to go!" << std::endl;
