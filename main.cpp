@@ -89,16 +89,16 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 bool rentBike(double rentDate, int amountOfMoney = 10)
 {
-  ignoreUnused(rentDate, amountOfMoney);
+   ignoreUnused(rentDate, amountOfMoney);
 
-  return{};
+   return{};
 }
 /*
  2)Play sound
  */
 void playSound(float wavFile, float fs = 44100.0f)
 {
- ignoreUnused(wavFile, fs);
+   ignoreUnused(wavFile, fs);
 }
 /*
  3)Phaser
@@ -128,8 +128,8 @@ void grillMeat(double amountMeat, bool lemon = true)
  */
 int getAdressNumber(int adressNumber)
 {
-  ignoreUnused(adressNumber);
-  return {};
+   ignoreUnused(adressNumber);
+   return {};
 }
 /*
  7)build level
