@@ -16,11 +16,11 @@ video: Chapter 2 - Part 3
  
  1) Write down the names of all of the primitives available in C++ (excluding wchar_t) here: 
  
- 
- 
- 
- 
- 
+ int
+ double
+ float
+ bool
+ char
  
  
  
@@ -56,10 +56,23 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a primitive named 'number' with an initial value of '2'
-    
-    
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    int velocity = 98;
+    int velocityMax = 127;
+    int velocityMin = 64;
+
+    double height = 1.83;
+    double width = 2.50;
+    double length = 4.583;
+
+    float pi = 3.1415926f;
+    float gravity = 6.67430f;
+    float gain = 1.0f;
+
+    bool off = false;
+    bool startGame = true;
+    bool gameOver = false;
+
+    ignoreUnused(number, velocity, velocityMax, velocityMin, height, width, length, pi, gravity, gain, off, startGame, gameOver); //passing each variable declared to the ignoreUnused() function
 }
 /*
  10 functions
@@ -72,45 +85,83 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1)Rent a bike
  */
+bool rentBike(double rentDate, int amountOfMoney = 10)
+{
+    ignoreUnused(rentDate, amountOfMoney);
 
+    return {};
+}
 /*
- 2)
+ 2)Play sound
  */
-
+void playSound(float wavFile, float fs = 44100.0f)
+{
+    ignoreUnused(wavFile, fs);
+}
 /*
- 3)
+ 3)Phaser
  */
-
+float phaser(float inputSig, float rate = 0.1f, float depth = 1.0f)
+{ 
+    ignoreUnused(inputSig, rate, depth); 
+    return {}; 
+} 
 /*
- 4)
+ 4)input gain
  */
-
+bool inputGain(float meter, float volume = 1.0f, int style = 3)  
+{ 
+    ignoreUnused(meter, volume, style); 
+    return {}; 
+} 
 /*
- 5)
+ 5)grill meat
  */
-
+void grillMeat(double amountMeat, bool lemon = true)
+{ 
+    ignoreUnused(amountMeat, lemon); 
+} 
 /*
- 6)
+ 6) adress number
  */
-
+int getAdressNumber(int adressNumber)
+{
+    ignoreUnused(adressNumber);
+    return {};
+}
 /*
- 7)
+ 7)build level
  */
-
+int buildLevel(bool isHouse, double priceOfMaterials)
+{
+    ignoreUnused(isHouse, priceOfMaterials); 
+    return {};
+}
 /*
- 8)
+ 8)abort mission
  */
-
+void abortMission(double countdown = 0.0, bool gunLoaded = false)
+{ 
+    ignoreUnused(countdown, gunLoaded);
+} 
 /*
- 9)
+ 9)Take away
  */
-
+float takeAway(int coffee, int sugar = 2, double milk = 2.5)
+{ 
+    ignoreUnused(coffee, sugar, milk); 
+    return {}; 
+} 
 /*
- 10)
+ 10)LieDetector?
  */
-
+int lieDetector(int kindOfInfo, int context = 2, int history = 6)
+{ 
+    ignoreUnused(kindOfInfo, context, history); 
+    return {}; 
+} 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -129,29 +180,29 @@ int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
-    
+
     //1)
-    
+    auto bike = rentBike(4, 10);
     //2)
-    
+    playSound(2.0f, 44100.0f);
     //3)
-    
+    auto phase = phaser(0.4f, 0.2f, 0.1f);
     //4)
-    
+    auto gain = inputGain(1.0f, 3);
     //5)
-    
+    grillMeat(3, true);
     //6)
-    
+    auto adress = getAdressNumber(46);
     //7)
-    
+    auto build = buildLevel(true, 100.000);
     //8)
-    
+    abortMission(0.0, false);
     //9)
-    
+    auto away = takeAway(1 , 2 , 2.5);
     //10)
-    
-    
-    ignoreUnused(carRented);
+    auto lie = lieDetector(2, 6);
+
+    ignoreUnused(carRented, bike, phase, gain, adress, build,  away, lie);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
