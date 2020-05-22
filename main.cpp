@@ -71,7 +71,7 @@ void variableDeclarations()
     bool off = false;
     bool startGame = true;
     bool gameOver = false;
-    
+
     ignoreUnused(number, velocity, velocityMax, velocityMin, height, width, length, pi, gravity, gain, off, startGame, gameOver); //passing each variable declared to the ignoreUnused() function
 }
 /*
@@ -89,16 +89,16 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
  */
 bool rentBike(double rentDate, int amountOfMoney = 10)
 {
-   ignoreUnused(rentDate, amountOfMoney);
+    ignoreUnused(rentDate, amountOfMoney);
 
-   return{};
+    return {};
 }
 /*
  2)Play sound
  */
 void playSound(float wavFile, float fs = 44100.0f)
 {
-   ignoreUnused(wavFile, fs);
+    ignoreUnused(wavFile, fs);
 }
 /*
  3)Phaser
@@ -128,8 +128,8 @@ void grillMeat(double amountMeat, bool lemon = true)
  */
 int getAdressNumber(int adressNumber)
 {
-   ignoreUnused(adressNumber);
-   return {};
+    ignoreUnused(adressNumber);
+    return {};
 }
 /*
  7)build level
@@ -180,7 +180,7 @@ int main()
 {
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
-    
+
     //1)
     auto bike = rentBike(4, 10);
     //2)
@@ -201,7 +201,7 @@ int main()
     auto away = takeAway(1 , 2 , 2.5);
     //10)
     auto lie = lieDetector(2, 6);
-    
+
     ignoreUnused(carRented, bike, phase, gain, adress, build,  away, lie);
     std::cout << "good to go!" << std::endl;
     return 0;    
